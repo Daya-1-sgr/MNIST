@@ -14,7 +14,7 @@ st.write("""
          Draw a digit in the canvas below and click the "Predict" button to see the result.
          """)
 
-canvas_result = st.canvas(
+canvas_result = st_canvas(
     fill_color="white",  
     stroke_color="black",  
     stroke_width=30,  
