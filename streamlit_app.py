@@ -4,7 +4,7 @@ import numpy as np
 from PIL import Image
 import io
 
-model = tf.keras.models.load_model('path_to_your_trained_model.h5')
+model = tf.keras.models.load_model('mnist_model.h5')
 
 st.title("MNIST Digit Recognizer")
 
