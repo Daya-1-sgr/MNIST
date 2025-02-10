@@ -4,11 +4,12 @@ import numpy as np
 from PIL import Image
 import io
 from streamlit_drawable_canvas import st_canvas
-model = tf.keras.models.load_model('mnist_model.h5')
+import pickle
+with open("mnist_model.pkl", "rb") as f:
+    model = pickle.load(f)
 
 st.title("MNIST Digit Recognizer")
 
-# Instructions for users
 st.write("""
          This is a simple Streamlit app where you can draw a digit (28x28 pixels) and predict its class using a pre-trained MNIST model.
          Draw a digit in the canvas below and click the "Predict" button to see the result.
@@ -17,7 +18,7 @@ st.write("""
 canvas_result = st_canvas(
     fill_color="white",  
     stroke_color="black",  
-    stroke_width=30,  
+    stroke_width=10,  
     height=280,  
     width=280,  
 )
